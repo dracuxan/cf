@@ -7,3 +7,10 @@ let split_on_char s =
     else loop (i + 1) last
   in
   if s = "" then [] else loop 0 0
+
+let split_string word =
+  let rec loop i acc = if i < 0 then acc else loop (i - 1) (word.[i] :: acc) in
+  loop (String.length word - 1) []
+
+let lowercase_ascii ch =
+  if ch >= 'A' && ch <= 'Z' then Char.chr (Char.code ch + 32) else ch
