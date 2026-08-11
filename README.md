@@ -1,1 +1,1 @@
-# CodeForces solution in Ocaml
+# CodeForces solutions
